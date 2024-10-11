@@ -1,173 +1,397 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-  }
-  
-  body {
-    font-family: 'Anton', sans-serif; /* All-caps font */
-    background-color: #111;
-    color: #fff;
-  }
-  
-  /* Header */
-  #main-header {
-    background-image: url('images/header-bg.jpg'); /* Image behind the header text */
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #f33;
-  }
-  
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Header */
+#main-header {
+  background-color: black; /* Solid black background for the navbar */
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f33;
+}
+
+/* Logo Styling */
+.logo {
+  height: 80px; /* Increase logo size */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('Screenshot\ 2024-10-11\ at\ 2.59.01\ PM.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background-color: #f33;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #fff;
+  color: #f33;
+}
+
+/* Section Headings */
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 50px 0;
+  letter-spacing: 3px;
+}
+
+/* Music Section */
+#music {
+  padding: 50px 20px;
+  text-align: center; /* Center text and elements in the section */
+}
+
+.music-slider {
+  position: relative; /* Position the container relatively */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  padding: 30px; /* Add padding to the slider */
+  overflow: hidden; /* Ensure overflow is hidden */
+}
+
+.music-gallery {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create responsive columns */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center items horizontally */
+}
+
+.music-item {
+  text-align: center; /* Center text in music item */
+  background-color: #222; /* Background for music items */
+  padding: 10px; /* Padding around items */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.music-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.music-item img {
+  width: 250px; /* Decrease the width of audio images */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it behaves as a block element */
+  margin: 0 auto; /* Center the image */
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.music-item h3 {
+  margin-top: 10px;
+}
+
+/* Audio Styles */
+.audio-container {
+  width: 100%; /* Full width for audio controls */
+  margin: 20px auto; /* Center the audio controls */
+}
+
+audio {
+  width: 80%; /* Decrease width of audio controls */
+  height: 25px; /* Adjust height for a smaller audio player */
+  margin-top: 10px; /* Space between title and audio controls */
+  border-radius: 5px; /* Rounded corners for audio player */
+}
+
+/* Optional: Style for audio controls */
+audio::-webkit-media-controls {
+  height: 25px; /* Set height of the audio controls */
+}
+
+/* Slider Navigation */
+.slick-prev,
+.slick-next {
+  color: white; /* Change arrow color */
+  font-size: 36px; /* Increase arrow size for better visibility */
+  position: absolute; /* Position them absolutely */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust to perfect center */
+  z-index: 10; /* Ensure they are above other elements */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border: none; /* No border */
+  border-radius: 50%; /* Rounded buttons */
+  width: 50px; /* Increase button width */
+  height: 50px; /* Increase button height */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.6); /* Change background on hover */
+}
+
+.slick-prev {
+  left: 20px; /* Add space from the left edge */
+}
+
+.slick-next {
+  right: 20px; /* Add space from the right edge */
+}
+
+/* Video Section */
+#videos {
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.video-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-slide iframe {
+  width: 100%; /* Make the iframe take full width of its container */
+  height: 450px; /* Set a fixed height to create a rectangular shape */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Optional: Add rounded corners for a nicer look */
+}
+
+/* Tour Dates Section */
+#tour {
+  padding: 50px 20px;
+  background-color: #222;
+}
+
+/* Tour Section Styling */
+.tour-section {
+  padding: 50px 20px;
+  background-image: url('path/to/your/tour-bg.jpg'); /* Add a background image */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center;
+  color: #fff; /* White text color for better contrast */
+  text-align: center;
+}
+
+.tour-section h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #f33; /* Optional: Use a highlight color for the heading */
+}
+
+/* Tour Dates List */
+.tour-dates {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tour-dates li {
+  display: flex; /* Align elements horizontally */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Vertically align items */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for tour items */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0; /* Space between items */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.tour-dates li:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+}
+
+.tour-info {
+  text-align: left; /* Align text to the left */
+}
+
+.tour-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tour-city {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #ccc; /* Light gray color for the city */
+}
+
+/* Tour Button Styling */
+.tour-btn {
+  padding: 10px 20px;
+  background-color: #f33;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tour-btn:hover {
+  background-color: #fff;
+  color: #f33;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .tour-dates li {
+    flex-direction: column; /* Stack elements vertically */
     text-align: center;
   }
-  .h3{
-    color: #fff;
+}
+
+@media (max-width: 480px) {
+  .tour-section h2 {
+    font-size: 2.5rem; /* Adjust heading size for small screens */
+  }
+
+  .tour-dates li {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .tour-date {
+    font-size: 1.3rem; /* Adjust date font size */
+  }
+
+  .tour-city {
+    font-size: 1rem; /* Adjust city font size */
+  }
+
+  .tour-btn {
+    padding: 8px 15px; /* Adjust button padding */
+  }
+}
+
+/* Merch Section */
+#merch {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.merch-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.merch-item img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #333;
+  border: none;
+  color: white;
+}
+
+.contact-form button {
+  padding: 15px;
+  background-color: #f33;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #fff;
+  color: #f33;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #000;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #f33;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;    /* Center nav items */
   }
   
   .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .hero .btn {
-    background-color: #f33;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-  }
-  
-  .hero .btn:hover {
-    background-color: #fff;
-    color: #f33;
-  }
-  
-  /* Section Headings */
-  section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 50px 0;
-    letter-spacing: 3px;
-  }
-  
-  /* Music Section */
-  #music {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .music-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .music-item img {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .music-item h3 {
-    margin-top: 10px;
-  }
-  
-  /* Video Section */
- /* Video Slider */
-#videos {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .video-slider {
-    max-width: 800px; /* Set maximum width for the slider */
-    margin: 0 auto;   /* Center the slider */
-  }
-  
-  .video-slide iframe {
-    width: 100%; /* Make videos responsive */
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border */
-  }
-  
-  /* Tour Dates Section */
-  #tour {
-    padding: 50px 20px;
-    background-color: #222;
-  }
-  
-  .tour-dates {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .tour-dates li {
-    margin: 
-    20px 0; }
-
-    /* Merch Section */ #merch { padding: 50px 20px; text-align: center; }
-    
-    .merch-gallery { display: flex; justify-content: center; gap: 40px; }
-    
-    .merch-item img { width: 200px; height: 200px; }
-    
-    /* Contact Section */ #contact { padding: 50px 20px; }
-    
-    .contact-form { max-width: 600px; margin: 0 auto; }
-    
-    .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin: 10px 0; background-color: #333; border: none; color: white; }
-    
-    .contact-form button { padding: 15px; background-color: #f33; border: none; color: white; font-size: 1.2rem; cursor: pointer; transition: background-color 0.3s; }
-    
-    .contact-form button
-    { background-color: #fff; color: #f33; }
-    
-    /* Footer */ footer { padding: 20px; text-align: center; background-color: #000; }
-    
-    .social-links a { color: white; margin: 0 10px; text-decoration: none; }
-    
-    .social-links a
-    { color: #f33; }
+    font-size: 2.5rem; /* Sm

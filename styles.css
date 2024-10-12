@@ -510,3 +510,23 @@ footer {
   .hero h2 {
     font-size: 2.5rem; /* Sm
   }
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width */
+        position: absolute; /* Position it over the content */
+        top: 60px; /* Below the navbar */
+        left: 0; /* Align to the left */
+        padding: 0; /* Remove padding */
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+}

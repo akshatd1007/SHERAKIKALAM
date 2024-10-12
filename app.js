@@ -29,3 +29,10 @@ $(document).ready(function() {
     autoplaySpeed: 3000
   });
 });
+const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+

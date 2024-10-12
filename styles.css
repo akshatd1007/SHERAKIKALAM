@@ -530,3 +530,7 @@ footer {
         display: block; /* Show hamburger menu */
     }
 }
+html {
+    scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+

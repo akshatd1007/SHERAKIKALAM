@@ -461,27 +461,8 @@ footer {
   color: white;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the full menu */
-    flex-direction: column;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 200px;
-    justify-content: center;
-  }
 
-  nav ul.show {
-    display: flex; /* Show the menu when active */
-  }
 
-  .hamburger-menu {
-    display: block; /* Show hamburger menu */
-  }
-}
 /* Mobile version: hide full navbar and show hamburger icon */
 @media (max-width: 768px) {
     nav ul {

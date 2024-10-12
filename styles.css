@@ -533,17 +533,3 @@ footer {
 html {
     scroll-behavior: smooth; /* Smooth scroll for anchor links */
 }
-nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    position: fixed; /* Keep it fixed at the top */
-    top: 0; /* Align at the top */
-    width: 100%;
-    z-index: 1000; /* Ensure it's above other content */
-}
-section {
-    margin-top: 60px; /* Add margin equal to navbar height */
-    padding: 20px;
-}
-
-

@@ -100,6 +100,15 @@ section h2 {
   text-align: center; /* Center text and elements in the section */
 }
 
+.music-slider {
+  position: relative; /* Position the container relatively */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  padding: 30px; /* Add padding to the slider */
+  overflow: hidden; /* Ensure overflow is hidden */
+}
+
 .music-gallery {
   display: grid; /* Use CSS Grid for layout */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create responsive columns */
@@ -110,68 +119,74 @@ section h2 {
 .music-item {
   text-align: center; /* Center text in music item */
   background-color: #222; /* Background for music items */
-  padding: 10px;
-  border-radius: 10px;
-  transition: transform 0.2s;
+  padding: 10px; /* Padding around items */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.2s; /* Smooth scaling effect */
 }
 
 .music-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .music-item img {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+  width: 250px; /* Decrease the width of audio images */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it behaves as a block element */
+  margin: 0 auto; /* Center the image */
+  border-radius: 10px; /* Optional: add rounded corners */
 }
 
 .music-item h3 {
   margin-top: 10px;
 }
 
+/* Audio Styles */
 .audio-container {
-  width: 100%;
-  margin: 20px auto;
+  width: 100%; /* Full width for audio controls */
+  margin: 20px auto; /* Center the audio controls */
 }
 
 audio {
-  width: 80%;
-  height: 25px;
-  margin-top: 10px;
-  border-radius: 5px;
+  width: 80%; /* Decrease width of audio controls */
+  height: 25px; /* Adjust height for a smaller audio player */
+  margin-top: 10px; /* Space between title and audio controls */
+  border-radius: 5px; /* Rounded corners for audio player */
+}
+
+/* Optional: Style for audio controls */
+audio::-webkit-media-controls {
+  height: 25px; /* Set height of the audio controls */
 }
 
 /* Slider Navigation */
 .slick-prev,
 .slick-next {
-  color: white;
-  font-size: 36px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  color: white; /* Change arrow color */
+  font-size: 36px; /* Increase arrow size for better visibility */
+  position: absolute; /* Position them absolutely */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust to perfect center */
+  z-index: 10; /* Ensure they are above other elements */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border: none; /* No border */
+  border-radius: 50%; /* Rounded buttons */
+  width: 50px; /* Increase button width */
+  height: 50px; /* Increase button height */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6); /* Change background on hover */
 }
 
 .slick-prev {
-  left: 20px;
+  left: 20px; /* Add space from the left edge */
 }
 
 .slick-next {
-  right: 20px;
+  right: 20px; /* Add space from the right edge */
 }
 
 /* Video Section */
@@ -186,10 +201,10 @@ audio {
 }
 
 .video-slide iframe {
-  width: 100%;
-  height: 450px;
-  border: none;
-  border-radius: 8px;
+  width: 100%; /* Make the iframe take full width of its container */
+  height: 450px; /* Set a fixed height to create a rectangular shape */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Optional: Add rounded corners for a nicer look */
 }
 
 /* Tour Dates Section */
@@ -198,12 +213,13 @@ audio {
   background-color: #222;
 }
 
+/* Tour Section Styling */
 .tour-section {
   padding: 50px 20px;
-  background-image: url('path/to/your/tour-bg.jpg');
-  background-size: cover;
+  background-image: url('path/to/your/tour-bg.jpg'); /* Add a background image */
+  background-size: cover; /* Ensure the background image covers the entire section */
   background-position: center;
-  color: #fff;
+  color: #fff; /* White text color for better contrast */
   text-align: center;
 }
 
@@ -212,34 +228,35 @@ audio {
   letter-spacing: 2px;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #f33;
+  color: #f33; /* Optional: Use a highlight color for the heading */
 }
 
+/* Tour Dates List */
 .tour-dates {
-  list-style: none;
+  list-style: none; /* Remove default list styling */
   padding: 0;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .tour-dates li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  display: flex; /* Align elements horizontally */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Vertically align items */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for tour items */
   padding: 20px;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 20px 0; /* Space between items */
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .tour-dates li:hover {
-  transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05); /* Slight scale effect on hover */
+  background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
 }
 
 .tour-info {
-  text-align: left;
+  text-align: left; /* Align text to the left */
 }
 
 .tour-date {
@@ -250,9 +267,10 @@ audio {
 .tour-city {
   font-size: 1.2rem;
   margin-top: 5px;
-  color: #ccc;
+  color: #ccc; /* Light gray color for the city */
 }
 
+/* Tour Button Styling */
 .tour-btn {
   padding: 10px 20px;
   background-color: #f33;
@@ -267,6 +285,36 @@ audio {
 .tour-btn:hover {
   background-color: #fff;
   color: #f33;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .tour-dates li {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-section h2 {
+    font-size: 2.5rem; /* Adjust heading size for small screens */
+  }
+
+  .tour-dates li {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .tour-date {
+    font-size: 1.3rem; /* Adjust date font size */
+  }
+
+  .tour-city {
+    font-size: 1rem; /* Adjust city font size */
+  }
+
+  .tour-btn {
+    padding: 8px 15px; /* Adjust button padding */
+  }
 }
 
 /* Merch Section */
@@ -338,6 +386,18 @@ footer {
   color: #f33;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;    /* Center nav items */
+  }
+  @media (max-width: 768px) {
+  /* Styles for tablet and mobile */
+}
+@media (max-width: 480px) {
+  /* Styles for mobile screens */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
@@ -446,35 +506,7 @@ footer {
         display: block; /* Show hamburger menu */
     }
 }
-/* Slider Navigation */
-.slick-prev,
-.slick-next {
-  color: white; /* Change arrow color */
-  font-size: 36px; /* Increase arrow size for better visibility */
-  position: absolute; /* Position them absolutely */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust to perfect center */
-  z-index: 10; /* Ensure they are above other elements */
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  border: none; /* No border */
-  border-radius: 50%; /* Rounded buttons */
-  width: 50px; /* Increase button width */
-  height: 50px; /* Increase button height */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth background transition */
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: rgba(255, 255, 255, 0.6); /* Change background on hover */
-}
-
-.slick-prev {
-  left: 20px; /* Add space from the left edge */
-}
-
-.slick-next {
-  right: 20px; /* Add space from the right edge */
-}
-
-
+  
+  .hero h2 {
+    font-size: 2.5rem; /* Sm
+  }

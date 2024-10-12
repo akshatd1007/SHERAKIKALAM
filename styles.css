@@ -538,3 +538,6 @@ html {
         display: none; /* Hide navbar items on larger screens */
     }
 }
+.hamburger-menu {
+    display: none; /* Hide hamburger by default */
+}

@@ -512,8 +512,3 @@ footer {
 html {
     scroll-behavior: smooth; /* Smooth scroll for anchor links */
 }
-@media (min-width: 769px) {
-    nav ul {
-        display: none; /* Hide navbar items on larger screens */
-    }
-}

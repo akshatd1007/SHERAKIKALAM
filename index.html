@@ -162,12 +162,31 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="app.js"></script>
   <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('active'); // Toggles the visibility of the links
-    }
-</script>
+<nav>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#merch">Merch</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home"><h1>Home Section</h1></section>
+    <section id="music"><h1>Music Section</h1></section>
+    <section id="videos"><h1>Videos Section</h1></section>
+    <section id="tour"><h1>Tour Section</h1></section>
+    <section id="merch"><h1>Merch Section</h1></section>
+    <section id="contact"><h1>Contact Section</h1></section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active'); // Toggles the visibility of the links
+        }
+    </script>
 
 
 </body>

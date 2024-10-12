@@ -503,12 +503,3 @@ footer {
         padding: 0; /* Remove padding */
     }
 
-    nav ul.active {
-        display: flex; /* Show when active */
-    }
-
-    
-}
-html {
-    scroll-behavior: smooth; /* Smooth scroll for anchor links */
-}

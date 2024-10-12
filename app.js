@@ -36,9 +36,3 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('active'); // Toggles the 'active' class
-    }
-</script>

@@ -540,6 +540,53 @@ nav ul {
     margin: 20px 0;
   }
 }
+  /* Desktop version */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile version: hide full navbar and show hamburger icon */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide the full menu by default */
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+
+  nav ul li {
+    margin: 20px 0; /* Increase space between items */
+  }
+}
+
 
 
 

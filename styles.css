@@ -456,43 +456,49 @@ footer {
 
 
 
-/* Mobile version: hide full navbar and show hamburger icon */
+/* Default styles for navbar */
+nav ul {
+    list-style: none;
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Positioning may be necessary */
+    top: 60px; /* Adjust as needed */
+    left: 0; /* Align left */
+    width: 100%; /* Full width */
+    background-color: black; /* Optional: background color */
+    z-index: 999; /* Ensure it's on top */
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    display: none; /* Hide by default */
+    font-size: 30px; /* Font size for hamburger icon */
+    cursor: pointer; /* Change cursor on hover */
+    color: white; /* Hamburger color */
+}
+
+/* Media query for mobile devices */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide the full menu by default */
-        flex-direction: column;
-        background-color: black; /* Background for the menu */
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
+        display: none; /* Hide the navbar items on mobile by default */
     }
-
-    nav ul.active {
-        display: flex; /* Show menu when toggled */
-    }
-
     .hamburger-menu {
-        display: block; /* Show hamburger menu */
+        display: block; /* Show hamburger menu on mobile */
     }
 }
-  
-  .hero h2 {
-    font-size: 2.5rem; /* Sm
-  }
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        background-color: rgba(0, 0, 0, 0.9); /* Darker background */
-        display: none; /* Hidden by default */
-        width: 100%; /* Full width */
-        position: absolute; /* Position it over the content */
-        top: 60px; /* Below the navbar */
-        left: 0; /* Align to the left */
-        padding: 0; /* Remove padding */
-    }
 
+/* To show navbar items when the hamburger is active */
+nav ul.active {
+    display: flex; /* Show navbar items when active */
+}
+
+/* Optional: hide nav items on larger screens */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Show navbar items on larger screens */
+        flex-direction: row; /* Row layout */
+    }
+    .hamburger-menu {
+        display: none; /* Hide hamburger on larger screens */
+    }
+}

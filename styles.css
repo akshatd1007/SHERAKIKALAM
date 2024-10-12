@@ -398,6 +398,73 @@ footer {
 @media (max-width: 480px) {
   /* Styles for mobile screens */
 }
+  @media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem; /* Reduce font size on mobile */
+    }
+    .hero p {
+        font-size: 1.2rem; /* Reduce font size on mobile */
+    }
+    .hero .btn {
+        padding: 10px 20px; /* Reduce padding on mobile */
+        font-size: 1rem;    /* Smaller font for the button */
+    }
+}
+@media (max-width: 480px) {
+    .music-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid */
+    }
+    .music-item img {
+        width: 200px; /* Adjust image size for mobile */
+    }
+}
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;              /* Less space between items */
+    }
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+@media (max-width: 480px) {
+    .tour-dates li {
+        flex-direction: column; /* Stack elements */
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    /* Styles for tablet and small screens */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tour-dates li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile specific styles */
+    nav ul {
+        gap: 5px;
+    }
+
+    .tour-dates li {
+        padding: 10px;
+    }
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
 
   
   .hero h2 {

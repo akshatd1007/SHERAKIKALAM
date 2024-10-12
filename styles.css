@@ -526,9 +526,7 @@ footer {
         display: flex; /* Show when active */
     }
 
-    .hamburger-menu {
-        display: block; /* Show hamburger menu */
-    }
+    
 }
 html {
     scroll-behavior: smooth; /* Smooth scroll for anchor links */

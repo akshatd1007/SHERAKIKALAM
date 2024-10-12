@@ -521,9 +521,7 @@ nav ul.active {
         display: flex; /* Show navbar items on larger screens */
         flex-direction: row; /* Row layout */
     }
-    .hamburger-menu {
-        display: none; /* Hide hamburger on larger screens */
-    }
+   
 }
   /* Hide hamburger menu on larger screens */
 @media (min-width: 769px) {

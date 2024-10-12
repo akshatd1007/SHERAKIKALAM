@@ -100,15 +100,6 @@ section h2 {
   text-align: center; /* Center text and elements in the section */
 }
 
-.music-slider {
-  position: relative; /* Position the container relatively */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Align items vertically */
-  padding: 30px; /* Add padding to the slider */
-  overflow: hidden; /* Ensure overflow is hidden */
-}
-
 .music-gallery {
   display: grid; /* Use CSS Grid for layout */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create responsive columns */
@@ -119,74 +110,68 @@ section h2 {
 .music-item {
   text-align: center; /* Center text in music item */
   background-color: #222; /* Background for music items */
-  padding: 10px; /* Padding around items */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.2s; /* Smooth scaling effect */
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s;
 }
 
 .music-item:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05);
 }
 
 .music-item img {
-  width: 250px; /* Decrease the width of audio images */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure it behaves as a block element */
-  margin: 0 auto; /* Center the image */
-  border-radius: 10px; /* Optional: add rounded corners */
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .music-item h3 {
   margin-top: 10px;
 }
 
-/* Audio Styles */
 .audio-container {
-  width: 100%; /* Full width for audio controls */
-  margin: 20px auto; /* Center the audio controls */
+  width: 100%;
+  margin: 20px auto;
 }
 
 audio {
-  width: 80%; /* Decrease width of audio controls */
-  height: 25px; /* Adjust height for a smaller audio player */
-  margin-top: 10px; /* Space between title and audio controls */
-  border-radius: 5px; /* Rounded corners for audio player */
-}
-
-/* Optional: Style for audio controls */
-audio::-webkit-media-controls {
-  height: 25px; /* Set height of the audio controls */
+  width: 80%;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 /* Slider Navigation */
 .slick-prev,
 .slick-next {
-  color: white; /* Change arrow color */
-  font-size: 36px; /* Increase arrow size for better visibility */
-  position: absolute; /* Position them absolutely */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust to perfect center */
-  z-index: 10; /* Ensure they are above other elements */
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  border: none; /* No border */
-  border-radius: 50%; /* Rounded buttons */
-  width: 50px; /* Increase button width */
-  height: 50px; /* Increase button height */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth background transition */
+  color: white;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(255, 255, 255, 0.6); /* Change background on hover */
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .slick-prev {
-  left: 20px; /* Add space from the left edge */
+  left: 20px;
 }
 
 .slick-next {
-  right: 20px; /* Add space from the right edge */
+  right: 20px;
 }
 
 /* Video Section */
@@ -201,10 +186,10 @@ audio::-webkit-media-controls {
 }
 
 .video-slide iframe {
-  width: 100%; /* Make the iframe take full width of its container */
-  height: 450px; /* Set a fixed height to create a rectangular shape */
-  border: none; /* Remove default border */
-  border-radius: 8px; /* Optional: Add rounded corners for a nicer look */
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 8px;
 }
 
 /* Tour Dates Section */
@@ -213,13 +198,12 @@ audio::-webkit-media-controls {
   background-color: #222;
 }
 
-/* Tour Section Styling */
 .tour-section {
   padding: 50px 20px;
-  background-image: url('path/to/your/tour-bg.jpg'); /* Add a background image */
-  background-size: cover; /* Ensure the background image covers the entire section */
+  background-image: url('path/to/your/tour-bg.jpg');
+  background-size: cover;
   background-position: center;
-  color: #fff; /* White text color for better contrast */
+  color: #fff;
   text-align: center;
 }
 
@@ -228,35 +212,34 @@ audio::-webkit-media-controls {
   letter-spacing: 2px;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #f33; /* Optional: Use a highlight color for the heading */
+  color: #f33;
 }
 
-/* Tour Dates List */
 .tour-dates {
-  list-style: none; /* Remove default list styling */
+  list-style: none;
   padding: 0;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .tour-dates li {
-  display: flex; /* Align elements horizontally */
-  justify-content: space-between; /* Space out items */
-  align-items: center; /* Vertically align items */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for tour items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 10px;
-  margin: 20px 0; /* Space between items */
+  margin: 20px 0;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .tour-dates li:hover {
-  transform: scale(1.05); /* Slight scale effect on hover */
-  background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .tour-info {
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .tour-date {
@@ -267,10 +250,9 @@ audio::-webkit-media-controls {
 .tour-city {
   font-size: 1.2rem;
   margin-top: 5px;
-  color: #ccc; /* Light gray color for the city */
+  color: #ccc;
 }
 
-/* Tour Button Styling */
 .tour-btn {
   padding: 10px 20px;
   background-color: #f33;
@@ -285,36 +267,6 @@ audio::-webkit-media-controls {
 .tour-btn:hover {
   background-color: #fff;
   color: #f33;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .tour-dates li {
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .tour-section h2 {
-    font-size: 2.5rem; /* Adjust heading size for small screens */
-  }
-
-  .tour-dates li {
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  .tour-date {
-    font-size: 1.3rem; /* Adjust date font size */
-  }
-
-  .tour-city {
-    font-size: 1rem; /* Adjust city font size */
-  }
-
-  .tour-btn {
-    padding: 8px 15px; /* Adjust button padding */
-  }
 }
 
 /* Merch Section */
@@ -386,89 +338,62 @@ footer {
   color: #f33;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: center;    /* Center nav items */
+    flex-direction: column;
+    align-items: center;
   }
-  @media (max-width: 768px) {
-  /* Styles for tablet and mobile */
-}
-@media (max-width: 480px) {
-  /* Styles for mobile screens */
-}
-  @media (max-width: 480px) {
-    .hero h2 {
-        font-size: 2rem; /* Reduce font size on mobile */
-    }
-    .hero p {
-        font-size: 1.2rem; /* Reduce font size on mobile */
-    }
-    .hero .btn {
-        padding: 10px 20px; /* Reduce padding on mobile */
-        font-size: 1rem;    /* Smaller font for the button */
-    }
-}
-@media (max-width: 480px) {
-    .music-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid */
-    }
-    .music-item img {
-        width: 200px; /* Adjust image size for mobile */
-    }
-}
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px;              /* Less space between items */
-    }
-    nav ul li a {
-        font-size: 1rem; /* Adjust font size */
-    }
-}
-@media (max-width: 480px) {
-    .tour-dates li {
-        flex-direction: column; /* Stack elements */
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    /* Styles for tablet and small screens */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .tour-dates li {
-        flex-direction: column;
-        text-align: center;
-    }
+  .hero h2 {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
 
-    .hero h2 {
-        font-size: 2.5rem;
-    }
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .music-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .music-item img {
+    width: 200px;
+  }
+
+  .tour-dates li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tour-dates li {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-    /* Mobile specific styles */
-    nav ul {
-        gap: 5px;
-    }
+  nav ul {
+    gap: 10px;
+  }
 
-    .tour-dates li {
-        padding: 10px;
-    }
-}
-img, iframe {
-    max-width: 100%;
-    height: auto;
-}
-  /* Hides the default navigation and shows the hamburger menu on smaller screens */
-nav ul {
-  display: flex;
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .tour-dates li {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
+/* Hamburger Menu for Mobile */
 .hamburger-menu {
   display: none;
   font-size: 30px;
@@ -480,157 +405,20 @@ nav ul {
   nav ul {
     display: none; /* Hide the full menu */
     flex-direction: column;
-    background-color: black; /* Optional: background for the menu */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-
-  nav ul li {
-    margin: 20px 0; /* Increase space between items */
-  }
-
-  nav ul.active {
-    display: flex; /* Show menu when active class is added */
-  }
-
-  .hamburger-menu {
-    display: block; /* Show the hamburger menu on mobile */
-  }
-}
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem; /* Reduce font size for mobile */
-    padding: 0 10px; /* Add padding to prevent text cutting off */
-  }
-
-  .hero p {
-    font-size: 1rem; /* Smaller text for mobile */
-    padding: 0 10px;
-  }
-
-  .hero .btn {
-    padding: 10px 20px; /* Reduce button size on mobile */
-    font-size: 1rem;
-  }
-}
-/* Improve overall spacing on mobile */
-@media (max-width: 768px) {
-  body {
-    padding: 0 10px; /* Add some padding around the body */
-  }
-
-  /* Adjust margins for sections */
-  section {
-    margin: 20px 0;
-  }
-}
-  /* Desktop version */
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-.hamburger-menu {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Mobile version: hide full navbar and show hamburger icon */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the full menu by default */
-    flex-direction: column;
     background-color: black;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 200px;
     justify-content: center;
-    align-items: center;
-    z-index: 999;
   }
 
-  nav ul.active {
-    display: flex; /* Show menu when toggled */
+  nav ul.show {
+    display: flex; /* Show the menu when active */
   }
 
   .hamburger-menu {
     display: block; /* Show hamburger menu */
   }
-
-  nav ul li {
-    margin: 20px 0; /* Increase space between items */
-  }
 }
-.hero {
-  text-align: center;
-  color: white;
-  padding: 100px 20px; /* Ensures spacing on desktop */
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.hero .btn {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-}
-
-/* For smaller screens (like mobile) */
-@media (max-width: 768px) {
-  .hero {
-    padding: 50px 10px; /* Adjust padding for mobile */
-  }
-
-  .hero h2 {
-    font-size: 2rem; /* Smaller text on mobile */
-  }
-
-  .hero p {
-    font-size: 1rem; /* Smaller text for the paragraph */
-  }
-
-  .hero .btn {
-    font-size: 1rem; /* Adjust button size */
-    padding: 10px 20px;
-  }
-}
-
-
-
-
-  
-  .hero h2 {
-    font-size: 2.5rem; /* Sm
-    

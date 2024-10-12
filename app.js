@@ -29,10 +29,8 @@ $(document).ready(function() {
     autoplaySpeed: 3000
   });
 });
-const hamburger = document.querySelector('.hamburger-menu');
-const navMenu = document.querySelector('nav ul');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active'); // Toggle the 'active' class
+}
 

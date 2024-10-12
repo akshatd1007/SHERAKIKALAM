@@ -464,6 +464,83 @@ img, iframe {
     max-width: 100%;
     height: auto;
 }
+  /* Hides the default navigation and shows the hamburger menu on smaller screens */
+nav ul {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide the full menu */
+    flex-direction: column;
+    background-color: black; /* Optional: background for the menu */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  nav ul li {
+    margin: 20px 0; /* Increase space between items */
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when active class is added */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show the hamburger menu on mobile */
+  }
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem; /* Reduce font size for mobile */
+    padding: 0 10px; /* Add padding to prevent text cutting off */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller text for mobile */
+    padding: 0 10px;
+  }
+
+  .hero .btn {
+    padding: 10px 20px; /* Reduce button size on mobile */
+    font-size: 1rem;
+  }
+}
+/* Improve overall spacing on mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px; /* Add some padding around the body */
+  }
+
+  /* Adjust margins for sections */
+  section {
+    margin: 20px 0;
+  }
+}
+
 
 
   

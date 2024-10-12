@@ -52,15 +52,38 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('bg.png');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('bg.png'); /* Your background image */
+    background-size: cover; /* Ensure it covers the area */
+    background-position: center; /* Center the background */
+    text-align: center;
 }
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh; /* Maintain full height on mobile */
+        background-size: cover; /* Ensure the image covers the space */
+    }
+
+    /* If necessary, adjust padding or margins here */
+    .hero h2 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller font for mobile */
+    }
+
+    .hero .btn {
+        font-size: 1rem; /* Adjust button size */
+        padding: 10px 20px; /* Reduce padding on mobile */
+    }
+}
+
 
 .hero h2 {
   font-size: 3rem;
@@ -502,3 +525,10 @@ nav ul.active {
         display: none; /* Hide hamburger on larger screens */
     }
 }
+  /* Hide hamburger menu on larger screens */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger on larger screens */
+    }
+}
+
